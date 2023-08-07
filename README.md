@@ -1,5 +1,99 @@
 # NIST SD302: Data Exploration and Cleaning
 
+[NIST Special Database 302](https://www.nist.gov/itl/iad/image-group/nist-special-database-302) has been split into several parts from SD302a to SD302i. we use only NIST SD302b and NIST SD302h. 
+
+### NIST SD302b
+
+The SD 302b directory structure is organized as follows:
+
+    images
+        - baseline                   # Collection type. Contain device code R, S, U, and V.
+            - R                      # Device code
+                - 1000               # Resolution
+                    - slap           # Impression type
+                        - png        # Image format
+                    - slap-segmented
+                        - ...
+                - 500
+                    - ...
+            - ...
+
+<br/>
+
+<b> 
+Count the subjects for each device. </b>
+
+
+
+
+<table>
+    <thead>
+        <td>
+            Device Code
+        </td>
+        <td>
+            Number of subjects
+        </td>
+    </thead>
+    <tr>
+        <td>
+            R
+        </td>
+        <td>
+           92
+        </td>
+    </tr>
+    <tr>
+        <td>
+           S
+        </td>
+        <td>
+          108
+        </td>
+    </tr>
+    <tr>
+        <td>
+           R and S
+        </td>
+        <td>
+          200
+        </td>
+    </tr>
+    <tr>
+        <td>
+           U
+        </td>
+        <td>
+          200
+        </td>
+    </tr>
+    <tr>
+        <td>
+           V
+        </td>
+        <td>
+          200
+        </td>
+    </tr>
+</table>   
+
+<br/>
+
+### NIST SD302h
+
+
+The SD 302h directory structure is organized as follows:
+
+    ebts                        # Record format
+        - latent                # Collection type
+            - lffs              # Transaction type
+                - original     
+                    - 1000      # Resolution, in PPI
+                - enhanced
+                    - ...
+        - checksum_latent_lffs_enhanced.csv # File checksums
+        - checksum_latent_lffs_original.csv
+                    
 ## Table of content
 
 - 
