@@ -23,7 +23,9 @@ The SD 302b directory structure is organized as follows:
 <b> 
 Count the subjects for each device. </b>
 
+We explore the subject in the database by counting the subject or person by uisng [count_person.py](https://gitlab.com/ksip/nist_sd302/-/blob/fe7f09e732095130cab32e599f9189dc2abe554d/src/count_person.py)
 
+Image names are in the form SUBJECT_ACTIVITY_HAND_ENCOUNTER_TECHNIQUE_DIGITIZER_RESOLUTION_DEPTH_CHANNELS_LPNUMBER_SOURCE.EXT
 
 
 <table>
@@ -94,9 +96,11 @@ The SD 302h directory structure is organized as follows:
         - checksum_latent_lffs_enhanced.csv # File checksums
         - checksum_latent_lffs_original.csv
                     
-## Table of content
 
-- 
+
+## Filtering
+
+- WE filter the data has mate in NIST SD302u and v by using [data_cleaning.ipynb](https://gitlab.com/ksip/nist_sd302/-/blob/fe7f09e732095130cab32e599f9189dc2abe554d/notebook/data_cleaning.ipynb)
 
 
 ## Reading .lffs
