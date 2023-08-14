@@ -1,6 +1,8 @@
-# NIST SD302: Data Exploration and Cleaning
+# <div align="center"> NIST SD302: Data Exploration and Filtering </div>
 
 [NIST Special Database 302](https://www.nist.gov/itl/iad/image-group/nist-special-database-302) has been split into several parts from SD302a to SD302i. we use only NIST SD302b and NIST SD302h. 
+
+## <div align="center"> Data Exploration </div>
 
 ### NIST SD302b
 
@@ -98,33 +100,36 @@ The SD 302h directory structure is organized as follows:
                     
 
 
-## Filtering
-
-- WE filter the data has mate in NIST SD302u and v by using [data_cleaning.ipynb](https://gitlab.com/ksip/nist_sd302/-/blob/fe7f09e732095130cab32e599f9189dc2abe554d/notebook/data_cleaning.ipynb)
+## <div align="center"> Data Filtering </div>
 
 
-## Reading .lffs
+In [data_filter.ipynb](), We perform filtering on latent fingerprint images from NIST SD302h using finger position labels from `finger_positions.csv`, considering corresponding mates present in NIST SD302b (devices: U and V)
 
-- Refrence
+
+## <div align="center"> Convert LFFS files to Images </div>
+
+The LFFS format includes Field Number `13.999`, indicating a LATENT FRICTION RIDGE IMAGE. We read LFFS files starting from `13.999` until `IEND` flag. These contents are passed into an `io.BytesIO` object created from the encoded image's bytes. We utilize `Image.open` from the PIL library to open and save the image into files. The source code for this process is available in [ffs_to_image.py]().
+
+
+## <div align="center">Refrence</div>
     
-    - [Data Format for the Interchange of Fingerprint, Facial & Other Biometric Information ANSI/NIST-ITL 1-2011 NIST Special Publication 500-290 Edition 3](https://www.nist.gov/publications/data-format-interchange-fingerprint-facial-other-biometric-information-ansinist-itl-1-1)
+- [Data Format for the Interchange of Fingerprint, Facial & Other Biometric Information ANSI/NIST-ITL 1-2011 NIST Special Publication 500-290 Edition 3](https://www.nist.gov/publications/data-format-interchange-fingerprint-facial-other-biometric-information-ansinist-itl-1-1)
 
-    - [Special Publication (NIST SP) - 500-290e3](https://doi.org/10.6028/NIST.SP.500-290e3)
+- [Special Publication (NIST SP) - 500-290e3](https://doi.org/10.6028/NIST.SP.500-290e3)
 
-- Field Number
+    - [NIST.SP.500-290e3.pdf] (https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.500-290e3.pdf)
 
-    - 13.999 - LATENT FRICTION RIDGE IMAGE (End with "IEND")
+- [SYNTHETIC LATENT FINGERPRINT GENERATOR](https://arxiv.org/abs/2208.13811)
 
-## Filtering the rolled and latent mates
 
-- Reference
+## <div align="center">Citing SFP</div>
 
-    - [SYNTHETIC LATENT FINGERPRINT GENERATOR](https://arxiv.org/abs/2208.13811)
+If you are utilizing the source code from this repository in your research, please reference the following.
 
-- The finger position annotation in the SD302h subset.
 
-- Use only first impression
+<br/>
 
-- 
+## <div align="center">Contact</div>
 
-ไม่ยึดชื่อไฟล์ แต่เอาชื่อไฟล์ไปเช็ค fgp จาก csv เลยปรากฏว่า อันที่ไฟล์มี X บอกเป็น unknown ใน csv มี fgp บอก เลยเลือกมาแต่ยังเกินอยู่ เลยเลือกเฉพาะ impression แรก ก้ได้พอดีเลยแล้วก็อ่านรูปจาก lffs เอาเลยก็เลยสอดคล้องกับ paper ที่ให้มี่เค้าดูแต่ 302h
+If you have any questions or need assistance, reach us at supakit.kr@gmail.com.
+
