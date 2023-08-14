@@ -18,24 +18,22 @@ def count_subject(img_dir):
 
 
 if __name__ == "__main__":
-    nist_sd302b_dir = (
-        r"H:\Workspace\KSIP\02_Database\00_ORIGINAL\NIST_SD302\sd302b\images\baseline"
-    )
+    nist_sd302b_dir = r"E:\KSIP\NIST_SD302\sd302b\images\baseline"
 
-    img_dir = os.path.join(nist_sd302b_dir, r"\R\500\slap-segmented\png")
+    img_dir = os.path.join(nist_sd302b_dir, r"R\500\slap-segmented\png")
     count_subject(img_dir)
 
-    img_dir = os.path.join(nist_sd302b_dir, r"\S\500\slap-segmented\png")
+    img_dir = os.path.join(nist_sd302b_dir, r"S\500\slap-segmented\png")
     count_subject(img_dir)
 
-    img_dir = os.path.join(nist_sd302b_dir, r"\U\500\roll\png")
+    img_dir = os.path.join(nist_sd302b_dir, r"U\500\roll\png")
     count_subject(img_dir)
 
-    img_dir = os.path.join(nist_sd302b_dir, r"\V\500\roll\png")
+    img_dir = os.path.join(nist_sd302b_dir, r"V\500\roll\png")
     count_subject(img_dir)
 
-    # Merge images from R and S devices.
-    img_dir = os.path.join(nist_sd302b_dir, r"\R_S")
+    # Copy images from R and S devices into R_S directory for checking.
+    img_dir = os.path.join(nist_sd302b_dir, r"R_S\500\slap-segmented\png")
     count_subject(img_dir)
 
     # \R\500\slap-segmented\png
