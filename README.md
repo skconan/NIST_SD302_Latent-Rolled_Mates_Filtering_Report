@@ -25,7 +25,7 @@ The SD 302b directory structure is organized as follows:
 <b> 
 Count the subjects for each device. </b>
 
-We explore the subject in the database by counting the subject or person by uisng [count_person.py](https://gitlab.com/ksip/nist_sd302/-/blob/fe7f09e732095130cab32e599f9189dc2abe554d/src/count_person.py)
+We explore the subject in the database by counting the subject or person by uisng [count_subject.py](https://github.com/skconan/NIST_SD302_Latent-Rolled_Mates_Filtering_Report/blob/71e280996707a3c0cc1ca7a9cad27de87b8dc166/src/count_subject.py)
 
 Image names are in the form SUBJECT_ACTIVITY_HAND_ENCOUNTER_TECHNIQUE_DIGITIZER_RESOLUTION_DEPTH_CHANNELS_LPNUMBER_SOURCE.EXT
 
@@ -103,12 +103,12 @@ The SD 302h directory structure is organized as follows:
 ## <div align="center"> Data Filtering </div>
 
 
-In [data_filter.ipynb](), We perform filtering on latent fingerprint images from NIST SD302h using finger position labels from `finger_positions.csv`, considering corresponding mates present in NIST SD302b (devices: U and V)
+In [data_filter.ipynb](https://github.com/skconan/NIST_SD302_Latent-Rolled_Mates_Filtering_Report/blob/71e280996707a3c0cc1ca7a9cad27de87b8dc166/notebook/data_filtering.ipynb), We perform filtering on latent fingerprint images from NIST SD302h using finger position labels from `finger_positions.csv`, considering corresponding mates present in NIST SD302b (devices: U and V)
 
 
 ## <div align="center"> Convert LFFS files to Images </div>
 
-The LFFS format includes Field Number `13.999`, indicating a LATENT FRICTION RIDGE IMAGE. We read LFFS files starting from `13.999` until `IEND` flag. These contents are passed into an `io.BytesIO` object created from the encoded image's bytes. We utilize `Image.open` from the PIL library to open and save the image into files. The source code for this process is available in [ffs_to_image.py]().
+The LFFS format includes Field Number `13.999`, indicating a LATENT FRICTION RIDGE IMAGE. We read LFFS files starting from `13.999` until `IEND` flag. These contents are passed into an `io.BytesIO` object created from the encoded image's bytes. We utilize `Image.open` from the PIL library to open and save the image into files. The source code for this process is available in [lffs_to_image.py](https://github.com/skconan/NIST_SD302_Latent-Rolled_Mates_Filtering_Report/blob/71e280996707a3c0cc1ca7a9cad27de87b8dc166/src/lffs_to_image.py).
 
 
 ## <div align="center">Refrence</div>
