@@ -1,6 +1,6 @@
 # <div align="center"> NIST SD302: Data Exploration and Filtering </div>
 
-[NIST Special Database 302](https://www.nist.gov/itl/iad/image-group/nist-special-database-302) has been split into several parts from SD302a to SD302i. we use only NIST SD302b and NIST SD302h. 
+[NIST Special Database 302](https://www.nist.gov/itl/iad/image-group/nist-special-database-302) has been split into several parts from SD302a to SD302i. Our focus is on NIST SD302b and NIST SD302h exclusively. 
 
 ## <div align="center"> Data Exploration </div>
 
