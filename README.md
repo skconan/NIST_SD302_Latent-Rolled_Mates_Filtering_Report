@@ -4,8 +4,9 @@
 
 The NIST SD302b and NIST SD302h databases do not contain completely matching fingerprint pairs. Therefore, we filtered the datasets to identify and include only the matching fingerprint pairs between both databases.
 
-We provide a CSV containing the list of filtered files from NIST SD302 at the following link: [NIST_SD302h_mate.csv](https://drive.google.com/file/d/1yE5TUHdqC4ZW2-mqUFOsB1V9JGv-vbzI/view?usp=sharing). Details of the data filtering process are outlined below:
+We provide a CSV containing the list of filtered files from NIST SD302 at the following link: [NIST_SD302h_mate.csv](https://drive.google.com/file/d/1yE5TUHdqC4ZW2-mqUFOsB1V9JGv-vbzI/view?usp=sharing). Details of the data filtering process are outlined below.
 
+This repository is part of the project available at [SFP-Progressive-Feedback-Latent-Fingerprint-Restoration](https://github.com/skconan/SFP-Progressive-Feedback-Latent-Fingerprint-Restoration).
 
 ## <div align="left"> Data Exploration </div>
 
@@ -129,7 +130,7 @@ The LFFS format includes Field Number `13.999`, indicating a LATENT FRICTION RID
 
 ## <div align="left">Citing SFP</div>
 
-If you are using SFP or benchmarks in your research, kindly reference the following.
+If you are using SFP or benchmarks in your research, kindly reference [DOI: 10.1109/ACCESS.2024.3397729](https://ieeexplore.ieee.org/document/10526230) the following.
 
 	@ARTICLE{10526230,
 	  author={Kriangkhajorn, Supakit and Horapong, Kittipol and Areekul, Vutipong},
