@@ -2,7 +2,12 @@
 
 [NIST Special Database 302](https://www.nist.gov/itl/iad/image-group/nist-special-database-302) has been split into several parts from SD302a to SD302i. Our focus is on NIST SD302b and NIST SD302h exclusively. 
 
-## <div align="center"> Data Exploration </div>
+The NIST SD302b and NIST SD302h databases do not contain completely matching fingerprint pairs. Therefore, we filtered the datasets to identify and include only the matching fingerprint pairs between both databases.
+
+We provide a CSV containing the list of filtered files from NIST SD302 at the following link: [NIST_SD302h_mate.csv](https://drive.google.com/file/d/1yE5TUHdqC4ZW2-mqUFOsB1V9JGv-vbzI/view?usp=sharing). Details of the data filtering process are outlined below:
+
+
+## <div align="left"> Data Exploration </div>
 
 ### NIST SD302b
 
@@ -100,18 +105,18 @@ The SD 302h directory structure is organized as follows:
                     
 
 
-## <div align="center"> Data Filtering </div>
+## <div align="left"> Data Filtering </div>
 
 
 In [data_filter.ipynb](https://github.com/skconan/NIST_SD302_Latent-Rolled_Mates_Filtering_Report/blob/71e280996707a3c0cc1ca7a9cad27de87b8dc166/notebook/data_filtering.ipynb), We perform filtering on latent fingerprint images from NIST SD302h using finger position labels from `finger_positions.csv`, considering corresponding mates present in NIST SD302b (devices: U and V)
 
 
-## <div align="center"> Convert LFFS files to Images </div>
+## <div align="left"> Convert LFFS files to Images </div>
 
 The LFFS format includes Field Number `13.999`, indicating a LATENT FRICTION RIDGE IMAGE. We read LFFS files starting from `13.999` until `IEND` flag. These contents are passed into an `io.BytesIO` object created from the encoded image's bytes. We utilize `Image.open` from the PIL library to open and save the image into files. The source code for this process is available in [lffs_to_image.py](https://github.com/skconan/NIST_SD302_Latent-Rolled_Mates_Filtering_Report/blob/71e280996707a3c0cc1ca7a9cad27de87b8dc166/src/lffs_to_image.py).
 
 
-## <div align="center">Refrence</div>
+## <div align="left">Refrence</div>
     
 - [Data Format for the Interchange of Fingerprint, Facial & Other Biometric Information ANSI/NIST-ITL 1-2011 NIST Special Publication 500-290 Edition 3](https://www.nist.gov/publications/data-format-interchange-fingerprint-facial-other-biometric-information-ansinist-itl-1-1)
 
@@ -122,7 +127,7 @@ The LFFS format includes Field Number `13.999`, indicating a LATENT FRICTION RID
 - [SYNTHETIC LATENT FINGERPRINT GENERATOR](https://arxiv.org/abs/2208.13811)
 
 
-## <div align="center">Citing SFP</div>
+## <div align="left">Citing SFP</div>
 
 If you are using SFP or benchmarks in your research, kindly reference the following.
 
@@ -142,7 +147,8 @@ or
 	S. Kriangkhajorn, K. Horapong and V. Areekul, "Spectral Filter Predictor for Progressive Latent Fingerprint Restoration," in IEEE Access, vol. 12, pp. 66773-66800, 2024, doi: 10.1109/ACCESS.2024.3397729.
 
 <br/>
-## <div align="center">Contact</div>
+
+## <div align="left">Contact</div>
 
 If you have any questions or need assistance, reach us at supakit.kr@gmail.com.
 
